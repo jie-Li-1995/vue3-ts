@@ -1,14 +1,16 @@
 <template>
   <div class="hello">
     <h1>{{ count }}</h1>
+    <h1>{{ bigCount }}</h1>
     <h1>{{ params.name }}</h1>
     <h1>{{ params.age }}</h1>
     <a-button type="primary" @click="changeCount">Count 加</a-button>
+    <a-button type="primary" @click="changeBigCount">BigCount 加</a-button>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from "vue";
+import { defineComponent, reactive, ref } from "vue";
 
 export default defineComponent({
   name: "HelloWorld",
@@ -20,7 +22,12 @@ export default defineComponent({
       name: "我是params name",
       age: 20,
     });
-    return { params };
+    let bigCount = ref(100);
+
+    const changeBigCount = () => {
+      bigCount.value = bigCount.value + 1;
+    };
+    return { params, bigCount, changeBigCount };
   },
   data: () => ({
     count: 1,
@@ -29,6 +36,7 @@ export default defineComponent({
     changeCount() {
       this.count++;
       this.params.age++;
+      this.bigCount++;
     },
   },
 });
