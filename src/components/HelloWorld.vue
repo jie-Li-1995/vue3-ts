@@ -15,6 +15,7 @@ export default defineComponent({
   methods: {
     getData() {
       const a = { name: "" };
+      const name = a.name;
     },
   },
 });
