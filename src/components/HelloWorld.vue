@@ -1,43 +1,44 @@
 <template>
   <div class="hello">
-    <p>an</p>
+    <h1>{{ count }}</h1>
+    <h1>{{ params.name }}</h1>
+    <h1>{{ params.age }}</h1>
+    <a-button type="primary" @click="changeCount">Count 加</a-button>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, reactive } from "vue";
 
 export default defineComponent({
   name: "HelloWorld",
   props: {
     msg: String,
   },
+  setup() {
+    const params = reactive({
+      name: "我是params name",
+      age: 20,
+    });
+    return { params };
+  },
+  data: () => ({
+    count: 1,
+  }),
   methods: {
-    getData() {
-      const a = { name: "" };
-      const name = a.name;
+    changeCount() {
+      this.count++;
+      this.params.age++;
     },
   },
 });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-h3 {
-  margin: 40px 0 0;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+.hello {
+  h1 {
+    color: #ff6700;
+    margin-bottom: 20px;
+  }
 }
 </style>
