@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, ref } from "vue";
+import { defineComponent, reactive, ref, watch } from "vue";
 
 export default defineComponent({
   name: "HelloWorld",
@@ -27,11 +27,25 @@ export default defineComponent({
     const changeBigCount = () => {
       bigCount.value = bigCount.value + 1;
     };
+    watch(bigCount, () => {
+      console.log("bigCount");
+    });
+    watch(
+      () => params.age,
+      () => {
+        console.log("params.name");
+      }
+    );
     return { params, bigCount, changeBigCount };
   },
   data: () => ({
     count: 1,
   }),
+  watch: {
+    count() {
+      console.log("count");
+    },
+  },
   methods: {
     changeCount() {
       this.count++;
