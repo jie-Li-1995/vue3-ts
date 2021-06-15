@@ -10,50 +10,50 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, ref, watch } from "vue";
+import { defineComponent, reactive, ref, watch } from 'vue'
 
 export default defineComponent({
-  name: "HelloWorld",
+  name: 'HelloWorld',
   props: {
-    msg: String,
+    msg: String
   },
-  setup() {
+  setup () {
     const params = reactive({
-      name: "我是params name",
-      age: 20,
-    });
-    let bigCount = ref(100);
+      name: '我是params name',
+      age: 20
+    })
+    const bigCount = ref(100)
 
     const changeBigCount = () => {
-      bigCount.value = bigCount.value + 1;
-    };
+      bigCount.value = bigCount.value + 1
+    }
     watch(bigCount, () => {
-      console.log("bigCount");
-    });
+      console.log('bigCount')
+    })
     watch(
       () => params.age,
       () => {
-        console.log("params.name");
+        console.log('params.name')
       }
-    );
-    return { params, bigCount, changeBigCount };
+    )
+    return { params, bigCount, changeBigCount }
   },
   data: () => ({
-    count: 1,
+    count: 1
   }),
   watch: {
-    count() {
-      console.log("count");
-    },
+    count () {
+      console.log('count')
+    }
   },
   methods: {
-    changeCount() {
-      this.count++;
-      this.params.age++;
-      this.bigCount++;
-    },
-  },
-});
+    changeCount () {
+      this.count++
+      this.params.age++
+      this.bigCount++
+    }
+  }
+})
 </script>
 
 <style scoped lang="less">
