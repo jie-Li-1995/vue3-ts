@@ -1,16 +1,16 @@
 # vue3-ts-ts
 
-## Project setup
+## 安装依赖
 ```
-yarn install
+yarn && yarn serve
 ```
 
-### Compiles and hot-reloads for development
+### 运行项目
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### 打包
 ```
 yarn build
 ```
