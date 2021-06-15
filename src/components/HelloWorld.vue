@@ -11,6 +11,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive, ref, watch } from 'vue'
+import { useStore } from 'vuex'
 
 export default defineComponent({
   name: 'HelloWorld',
@@ -36,7 +37,13 @@ export default defineComponent({
         console.log('params.name')
       }
     )
-    return { params, bigCount, changeBigCount }
+    const store = useStore()
+    return {
+      params,
+      bigCount,
+      changeBigCount,
+      increaseCount: () => store.commit('increaseCount')
+    }
   },
   data: () => ({
     count: 1
