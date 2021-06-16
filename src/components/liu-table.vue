@@ -32,7 +32,7 @@ export default defineComponent({
         this.tableData.push({
           name: firstName[num] + lastName[num],
           age: num + 10,
-          id: Math.floor(Math.random() * 10000).toString()
+          id: Math.floor(Math.random() * 10000).toString().padStart(4, '0')
         })
       }
     }
