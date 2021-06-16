@@ -17,17 +17,17 @@ const routes: Array<RouteRecordRaw> = [
     redirect: { name: 'home' },
     children: [
       {
-        path: '/main/home',
+        path: 'home',
         name: 'home',
         component: homeView
       },
       {
-        path: '/about',
+        path: 'about',
         name: 'about',
         component: aboutView
       },
       {
-        path: '/slot',
+        path: 'slot',
         name: 'slot',
         component: slotView
       }
