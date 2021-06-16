@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
     <a-button @click="changeLocale('cn')">中文</a-button>
     <a-button @click="changeLocale('en')">English</a-button>
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
@@ -15,7 +14,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from '@/components/HelloWorld.vue'
+import HelloWorld from '@/components/helloWorld.vue'
 
 export default defineComponent({
   name: 'Home',

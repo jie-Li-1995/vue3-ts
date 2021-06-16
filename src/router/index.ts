@@ -1,9 +1,9 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
 const layout = () => import('@/views/layout.vue')
-const homeView = () => import('../views/Home.vue')
-const aboutView = () => import('../views/About.vue')
-const slotView = () => import('../views/Slot.vue')
+const homeView = () => import('../views/home.vue')
+const aboutView = () => import('../views/about.vue')
+const slotView = () => import('../views/slot.vue')
 
 const routes: Array<RouteRecordRaw> = [
   {
