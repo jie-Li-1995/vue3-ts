@@ -12,12 +12,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'liu-table',
   data: () => ({
-    tableData: [] as any
+    tableData: [] as { id: string, name: string, age: number }[]
   }),
   mounted (): void {
     this.initData()

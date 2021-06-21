@@ -1,13 +1,21 @@
+const path = require('path')
+
 module.exports = {
-  runtimeCompiler: true, // 是否使用包含运行时编译器的 Vue 构建版本
+  // 是否使用包含运行时编译器的 Vue 构建版本
+  runtimeCompiler: true,
+
   publicPath: './',
   assetsDir: 'public',
-  productionSourceMap: false, // 不在production环境使用SourceMap
+
+  // 不在production环境使用SourceMap
+  productionSourceMap: false,
+
   configureWebpack: {
     externals: {
       Microsoft: 'Microsoft'
     }
   },
+
   chainWebpack: config => {
     config
       .plugin('html')
@@ -16,6 +24,7 @@ module.exports = {
         return args
       })
   },
+
   devServer: {
     public: '0.0.0.0:4396',
     port: 4396, // 端口号
@@ -34,6 +43,7 @@ module.exports = {
       }
     }
   },
+
   css: {
     // 当为true时，css文件名可省略 module 默认为 false
     requireModuleExtension: true,
@@ -50,6 +60,13 @@ module.exports = {
       less: {
         javascriptEnabled: true
       }
+    }
+  },
+
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'less',
+      patterns: [path.resolve(__dirname, 'src/assets/css/global.less')]
     }
   }
 }

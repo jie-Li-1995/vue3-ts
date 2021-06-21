@@ -33,7 +33,11 @@
 <style lang="less">
 .about {
   counter-reset: subsection;
+  h1 {
+    color: @primary;
+  }
   h1:before {
+    color: @primary;
     counter-increment: subsection;
     content: counter(subsection) "-----";
   }
