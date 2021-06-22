@@ -1,0 +1,113 @@
+{
+  "editor.tabSize": 2,
+  "breadcrumbs.enabled": true,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "vetur.format.defaultFormatter.js": "vscode-typescript", //让vue中的js按编辑器自带的ts格式进行格式化
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "auto"
+    },
+    "prettier": {
+      "printWidth": 160,
+      "wrapAttributes": false,
+      "sortAttributes": false,
+      "semi": false,
+      "singleQuote": true,
+      "space-before-function-paren": 2
+    }
+  },
+  "search.followSymlinks": false,
+  "git.autorefresh": false,
+  "explorer.confirmDelete": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "background.style": {
+    "content": "''",
+    "pointer-events": "none",
+    "position": "absolute",
+    "z-index": "99999",
+    "width": "50%",
+    "height": "100%",
+    "background-position": "50% 50%",
+    "background-repeat": "no-repeat",
+    "opacity": 1
+  },
+  "liveServer.settings.useWebExt": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "workbench.sideBar.location": "left",
+  "background.enabled": false,
+  "liveServer.settings.fullReload": true,
+  "livereload.port": 5500,
+  "editor.largeFileOptimizations": false,
+  // "[javascript]": {
+  //   "editor.defaultFormatter": "HookyQR.beautify"
+  // },
+  "files.autoSave": "afterDelay",
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 160,
+  "files.associations": {},
+  "editor.rulers": [],
+  "workbench.iconTheme": "vscode-icons",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "html.format.extraLiners": "",
+  "workbench.colorTheme": "Community Material Theme Palenight",
+  "editor.quickSuggestions": null,
+  "editor.fontSize": 14,
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "editor.fontWeight": null,
+  "powermode.enabled": true, //启动效果
+  "powermode.enableShake": false,
+  "http.proxyAuthorization": null,
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "less.compile": {
+    "compress": true, //是否压缩
+    "sourceMap": false, //是否生成map文件，有了这个可以在调试台看到less行数
+    "out": true, // 是否输出css文件，false为不输出
+    "outExt": ".css" // 输出文件的后缀,小程序可以写‘wxss‘
+  },
+  "editor.fontLigatures": null,
+  "[less]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "beautify.config": "",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "fileheader.customMade": {
+    "Author": "liu_qihao",
+    "Date": "Do not edit",
+    "LastEditors": "liu_qihao",
+    "LastEditTime": "Do not edit",
+    "Description": "哈哈哈哈哈哈哈"
+  },
+  "editor.semanticTokenColorCustomizations": null,
+  "editor.tokenColorCustomizations": null,
+  "html.format.contentUnformatted": "",
+  "editor.formatOnSave": true,
+  "cssModules.camelCase": false,
+  "beautify.ignore": "",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  } // 关闭代码抖动
+}

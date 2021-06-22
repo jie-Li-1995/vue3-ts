@@ -33,24 +33,21 @@
 <style lang="less">
 .about {
   counter-reset: subsection;
-  h1 {
-    color: @primary;
-  }
   h1:before {
     color: @primary;
     counter-increment: subsection;
-    content: counter(subsection) "-----";
+    content: counter(subsection) '-----';
   }
   ul {
     li {
       &::marker {
-        content: "-----";
+        content: '-----';
       }
     }
   }
   ol {
     li::marker {
-      content: counter() "-----";
+      content: counter() '-----';
     }
   }
 }
