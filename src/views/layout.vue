@@ -1,16 +1,14 @@
 <template>
   <div class="layout">
-    <div id="nav">
+    <div class="tw-flex tw-justify-around">
       <router-link :to="{name: 'home'}" v-slot="{navigate, isActive}">
-        <h1 :class="{'active': isActive}" @click="navigate">Home</h1>
+        <h1 :class="{'tw-text-primary': isActive}" @click="navigate">Home</h1>
       </router-link>
-      |
       <router-link :to="{name: 'about'}" v-slot="{navigate, isActive}">
-        <h1 :class="{'active': isActive}" @click="navigate">About</h1>
+        <h1 :class="{'tw-text': isActive}" @click="navigate">About</h1>
       </router-link>
-      |
       <router-link :to="{name: 'slot'}" v-slot="{navigate, isActive}">
-        <h1 :class="{'active': isActive}" @click="navigate">Slot</h1>
+        <h1 :class="{'tw-text-primary': isActive}" @click="navigate">Slot</h1>
       </router-link>
     </div>
     <router-view v-slot="{ Component }">
