@@ -10,8 +10,8 @@
     </base-info>
     <hr>
     <liu-table>
-      <template #title="{ data }">
-        {{data}}
+      <template #title="{data:{name}}">
+        {{ name }}
       </template>
     </liu-table>
   </div>
